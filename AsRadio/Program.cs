@@ -68,6 +68,7 @@ namespace AsRadio
 
                     for (int i = 0; i < 640; i++) sendData[i] = buffer.Dequeue();
 
+                    // TODO: Optimize this part
                     List<byte> concat = new List<byte>();
                     concat.AddRange(sendDataHeader);
                     concat.AddRange(sendData);
